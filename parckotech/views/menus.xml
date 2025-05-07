@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+ <!-- Menu racine réservé aux admins -->
+  <menuitem id="menu_parckotech_root"
+            name="ParckoTech"
+            sequence="10"
+            groups="parckotech.group_parckotech_admin_global"/>
+    <!-- Sous-menus -->
+    <menuitem id="menu_parckotech_parc"
+              name="Parc"
+              parent="menu_parckotech_root"
+              sequence="1"/>
+    <menuitem id="menu_parckotech_service"
+              name="Support &amp; Service"
+              parent="menu_parckotech_root"
+              sequence="2"/>
+    <menuitem id="menu_parckotech_contract"
+              name="Contrats &amp; Facturation"
+              parent="menu_parckotech_root"
+              sequence="3"/>
+    <menuitem id="menu_parckotech_config"
+              name="Configuration"
+              parent="menu_parckotech_root"
+              sequence="99"
+              groups="parckotech.group_parckotech_manager"/>
+
+    <!-- Parc -->
+    <menuitem id="menu_parckotech_packs"
+              name="Packs"
+              parent="menu_parckotech_parc"
+              action="action_parckotech_pack_informatique"
+              sequence="1"/>
+    <menuitem id="menu_parckotech_materiels"
+              name="Matériels"
+              parent="menu_parckotech_parc"
+              action="action_parckotech_materiel"
+              sequence="2"/>
+    <menuitem id="menu_parckotech_logiciels"
+              name="Logiciels"
+              parent="menu_parckotech_parc"
+              action="action_parckotech_logiciel"
+              sequence="3"/>
+    <menuitem id="menu_parckotech_licences"
+              name="Licences"
+              parent="menu_parckotech_parc"
+              action="action_parckotech_licence_logicielle"
+              sequence="4"/>
+    <menuitem id="menu_parckotech_sites"
+              name="Sites"
+              parent="menu_parckotech_parc"
+              action="action_parckotech_site_client"
+              sequence="5"/>
+
+    <!-- Support & Service -->
+    <menuitem id="menu_parckotech_incidents"
+              name="Incidents"
+              parent="menu_parckotech_service"
+              action="action_parckotech_incident"
+              sequence="1"/>
+    <menuitem id="menu_parckotech_interventions"
+              name="Interventions"
+              parent="menu_parckotech_service"
+              action="action_parckotech_intervention"
+              sequence="2"/>
+    <menuitem id="menu_parckotech_alertes"
+              name="Alertes envoyées"
+              parent="menu_parckotech_service"
+              action="action_parckotech_alerte_envoyee"
+              sequence="3"/>
+
+    <!-- Contrats & Facturation -->
+    <menuitem id="menu_parckotech_contrats"
+              name="Contrats"
+              parent="menu_parckotech_contract"
+              action="action_parckotech_contrat_service"
+              sequence="1"/>
+    <menuitem id="menu_parckotech_factures"
+              name="Factures contrat"
+              parent="menu_parckotech_contract"
+              action="action_parckotech_facture_contrat"
+              sequence="2"/>
+
+    <!-- Configuration -->
+    <menuitem id="menu_parckotech_parametres_alerte"
+              name="Paramètres des alertes"
+              parent="menu_parckotech_config"
+              action="action_parckotech_parametre_alerte"
+              sequence="1"/>
+</odoo>

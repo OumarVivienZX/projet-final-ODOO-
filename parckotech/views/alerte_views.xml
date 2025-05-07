@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- ACTIONS -->
+    <record id="action_parckotech_parametre_alerte" model="ir.actions.act_window">
+        <field name="name">Paramètres d’alerte</field>
+        <field name="res_model">parckotech.parametre.alerte</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <record id="action_parckotech_alerte_envoyee" model="ir.actions.act_window">
+        <field name="name">Alertes envoyées</field>
+        <field name="res_model">parckotech.alerte.envoyee</field>
+        <field name="view_mode">list,form,graph</field>
+    </record>
+
+    <!-- PARAMETRE ALERTE - LISTE -->
+    <record id="view_parckotech_parametre_alerte_list" model="ir.ui.view">
+        <field name="name">parckotech.parametre.alerte.list</field>
+        <field name="model">parckotech.parametre.alerte</field>
+        <field name="type">list</field>
+        <field name="arch" type="xml">
+            <list string="Paramètres d’alerte">
+                <field name="name"/>
+                <field name="type_alerte"/>
+                <field name="frequence"/>
+                <field name="jours_avant_expiration"/>
+                <field name="actif"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- PARAMETRE ALERTE - FORMULAIRE -->
+    <record id="view_parckotech_parametre_alerte_form" model="ir.ui.view">
+        <field name="name">parckotech.parametre.alerte.form</field>
+        <field name="model">parckotech.parametre.alerte</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <form string="Paramètre d’alerte">
+                <sheet>
+                    <group col="4">
+                        <field name="name"/>
+                        <field name="type_alerte"/>
+                        <field name="frequence"/>
+                        <field name="jours_avant_expiration"/>
+                        <field name="actif"/>
+                        <field name="global_alert"/>
+                        <field name="client_id"/>
+                        <field name="user_ids" widget="many2many_tags"/>
+                    </group>
+                    <field name="message_personnalise" nolabel="1"/>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- ALERTE ENVOYEE - LISTE -->
+    <record id="view_parckotech_alerte_envoyee_list" model="ir.ui.view">
+        <field name="name">parckotech.alerte.envoyee.list</field>
+        <field name="model">parckotech.alerte.envoyee</field>
+        <field name="type">list</field>
+        <field name="arch" type="xml">
+            <list string="Alertes envoyées">
+                <field name="name"/>
+                <field name="type"/>
+                <field name="client_id"/>
+                <field name="date_envoi"/>
+                <field name="etat_traitement"/>
+                <field name="repetition_count"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- ALERTE ENVOYEE - FORMULAIRE -->
+    <record id="view_parckotech_alerte_envoyee_form" model="ir.ui.view">
+        <field name="name">parckotech.alerte.envoyee.form</field>
+        <field name="model">parckotech.alerte.envoyee</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <form string="Alerte envoyée">
+                <sheet>
+                    <group col="2">
+                        <field name="name"/>
+                        <field name="type"/>
+                        <field name="client_id"/>
+                        <field name="date_envoi"/>
+                        <field name="etat_traitement"/>
+                        <field name="repetition_count"/>
+                    </group>
+                    <field name="message" nolabel="1"/>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>
+

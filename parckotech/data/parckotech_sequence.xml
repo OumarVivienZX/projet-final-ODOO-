@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Séquence pour les packs -->
+    <record id="seq_pack_informatique" model="ir.sequence">
+        <field name="name">Pack Informatique</field>
+        <field name="code">parckotech.pack.informatique</field>
+        <field name="prefix">PACK/</field>
+        <field name="padding">4</field>
+        <field name="active">True</field>
+    </record>
+    <!-- Séquence pour les matériels -->
+    <record id="seq_materiel" model="ir.sequence">
+        <field name="name">Matériel</field>
+        <field name="code">parckotech.materiel</field>
+        <field name="prefix">MAT/</field>
+        <field name="padding">4</field>
+        <field name="active">True</field>
+    </record>
+    <!-- Séquence pour incidents -->
+    <record id="seq_incident" model="ir.sequence">
+        <field name="name">Incident</field>
+        <field name="code">parckotech.incident</field>
+        <field name="prefix">INC/</field>
+        <field name="padding">4</field>
+        <field name="active">True</field>
+    </record>
+    <!-- Et ainsi de suite pour intervention, licence, contrat… -->
+</odoo>
+
+
