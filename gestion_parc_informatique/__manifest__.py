@@ -5,7 +5,7 @@
     'description': """
         Ce module permet de gérer les clients, contrats, équipements, tickets et factures.
     """,
-    'author': 'Ton Nom',
+    'author': 'Konan oumar vivien',
     'category': 'Tools',
     'depends': ['base'],
     'data': [

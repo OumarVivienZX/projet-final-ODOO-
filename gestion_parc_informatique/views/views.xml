@@ -4,13 +4,13 @@
     <record id="view_client_tree" model="ir.ui.view">
         <field name="name">client.tree</field>
         <field name="model">gestion_parc.client</field>
-        <field name="type">tree</field>
+        <field name="type">list</field>
         <field name="arch" type="xml">
-            <tree>
+            <list>
                 <field name="name"/>
                 <field name="contact"/>
                 <field name="address"/>
-            </tree>
+            </list>
         </field>
     </record>
 
@@ -42,21 +42,21 @@
     <record id="action_client" model="ir.actions.act_window">
         <field name="name">Clients</field>
         <field name="res_model">gestion_parc.client</field>
-        <field name="view_mode">tree,form</field>
+        <field name="view_mode">list,form</field>
     </record>
 
     <!-- Vues pour Contrat_Infogérance -->
     <record id="view_contrat_tree" model="ir.ui.view">
         <field name="name">contrat_infogerance.tree</field>
         <field name="model">gestion_parc.contrat_infogerance</field>
-        <field name="type">tree</field>
+        <field name="type">list</field>
         <field name="arch" type="xml">
-            <tree>
+            <list>
                 <field name="client_id"/>
                 <field name="date_debut"/>
                 <field name="date_fin"/>
                 <field name="frequence_facturation"/>
-            </tree>
+            </list>
         </field>
     </record>
 
@@ -89,16 +89,16 @@
     <record id="action_contrat" model="ir.actions.act_window">
         <field name="name">Contrats d'Infogérance</field>
         <field name="res_model">gestion_parc.contrat_infogerance</field>
-        <field name="view_mode">tree,form</field>
+        <field name="view_mode">list,form</field>
     </record>
 
     <!-- Vues pour Équipements -->
     <record id="view_equipement_tree" model="ir.ui.view">
         <field name="name">equipements.tree</field>
         <field name="model">gestion_parc.equipements</field>
-        <field name="type">tree</field>
+        <field name="type">list</field>
         <field name="arch" type="xml">
-            <tree>
+            <list>
                 <field name="client_id"/>
                 <field name="id_materiel"/>
                 <field name="type_de_materiel"/>
@@ -106,7 +106,7 @@
                 <field name="statut_materiel"/>
                 <field name="date_acquisition"/>
                 <field name="fin_de_garantie"/>
-            </tree>
+            </list>
         </field>
     </record>
 
@@ -142,22 +142,22 @@
     <record id="action_equipement" model="ir.actions.act_window">
         <field name="name">Équipements</field>
         <field name="res_model">gestion_parc.equipements</field>
-        <field name="view_mode">tree,form</field>
+        <field name="view_mode">list,form</field>
     </record>
 
     <!-- Vues pour Ticket -->
     <record id="view_ticket_tree" model="ir.ui.view">
         <field name="name">ticket.tree</field>
         <field name="model">gestion_parc.ticket</field>
-        <field name="type">tree</field>
+        <field name="type">list</field>
         <field name="arch" type="xml">
-            <tree>
+            <list>
                 <field name="equipement_id"/>
                 <field name="id_ticket"/>
                 <field name="description"/>
                 <field name="statut"/>
                 <field name="date_creation"/>
-            </tree>
+            </list>
         </field>
     </record>
 
@@ -183,21 +183,21 @@
     <record id="action_ticket" model="ir.actions.act_window">
         <field name="name">Tickets</field>
         <field name="res_model">gestion_parc.ticket</field>
-        <field name="view_mode">tree,form</field>
+        <field name="view_mode">list,form</field>
     </record>
 
     <!-- Vues pour Facture -->
     <record id="view_facture_tree" model="ir.ui.view">
         <field name="name">facture.tree</field>
         <field name="model">gestion_parc.facture</field>
-        <field name="type">tree</field>
+        <field name="type">list</field>
         <field name="arch" type="xml">
-            <tree>
+            <list>
                 <field name="contrat_id"/>
                 <field name="id_facture"/>
                 <field name="montant"/>
                 <field name="date_emission"/>
-            </tree>
+            </list>
         </field>
     </record>
 
@@ -222,7 +222,7 @@
     <record id="action_facture" model="ir.actions.act_window">
         <field name="name">Factures</field>
         <field name="res_model">gestion_parc.facture</field>
-        <field name="view_mode">tree,form</field>
+        <field name="view_mode">list,form</field>
     </record>
 
     <!-- Menu Principal -->
